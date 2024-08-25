@@ -1,16 +1,23 @@
-*{
+*{	
+	/*O asterisco representa uma configuracao que sera feita, mas nao somente em uma parte do documento, exemplo, no header, mas em todos o documento*/
 	margin:0;
+	/*A margem pode ser escrita assim. margin 10px 20px 5px, ou pode ser escrito assim: margin 10x. se escrito somente um valor ele ira aplicar esse valor a todos os lados*/
+	/*se estover escrito mais de um valor é so aplicar e ver onde esta alterando a margem, se é top, bottom,left or right*/
 	padding: 0;
+	/*padding é o preenchimento entre o elemento e a sua borda*/
 	box-sizing: border-box;
+	/*box-sizing : contend-box é o defaul, quando voce altera as bordas e padding um elemento pode descer da linha que voce colocou. se usar o border-box ele mantem*/
+	/*os elementos na mesma linha*/
 	list-style: none;
 }
 
 body{
 
-	background-color: black;
 	color: #fff;
 	font-size:16px ;
+	overflow: hidden;
 
+	/*overflow hidden esconde a barra lateral*/
 }
 
 header {
@@ -24,11 +31,12 @@ header {
 	gap: 30%;
 	align-items: center;
 	z-index: 2;
+	/*z-index indica qual elemento deve ficar na frente do outro. ele fala do eixo z*/
 
 
 	& img {	
 
-		width: 250px;
+		width: 200px;
 
 
 	}
@@ -48,7 +56,55 @@ section{
 
 	background-image: radial-gradient(#234523,#435543,#456645);
 	height: 100vh;
+	/*vh é viewport(dispositivo) height, nessa caso ele ocupa 100 do dispositivo*/
+	/*se for vw é a mesma idaia mas para largura*/
 	position: relative;
+
+	& .list{
+		/*usei o . pq estou alterando a list, que é uma classe de uma div*/
+		width: 70vw;
+		height: 100%;
+		margin: auto;
+		position: relative;
+	
+
+		& .item{
+
+			position: absolute;
+			inset: 0;
+
+			& .car-img{
+
+				position: absolute;
+				margin-top: 50%;
+				transform: translateY(-50%);
+				width: 50%;
+
+				& img{
+					width: 100%;
+
+				}
+			}
+
+			& .content{
+
+				position: absolute;
+				right: 100px;
+				width: 70%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: end;
+				align-items: end;
+				gap: 20px;
+
+				
+			}
+
+		}
+
+
+	}
 }
 
 .arrows{
