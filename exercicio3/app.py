@@ -13,4 +13,4 @@ while True:
     
 
 #enquanto o valor for 0<x>10 escreve mensagem numero cadastrado e retorne para pedir outro numero
-#se o valor for diferente do acima escreve outra mensagem e
+#se o valor for diferente do acima escreve outra mensagem 
