@@ -22,7 +22,10 @@ valor_hora = float(input('DIGITE O VALOR DA HORA  DE TRABALHO: '))
 
 horas_trabalho =220
 salario_bruto = valor_hora * horas_trabalho
-salario_ded = salario_bruto - salario_bruto * 0.05
+salario_imp5 = salario_bruto - salario_bruto * 0.05
+salario_imp10 = salario_bruto - salario_bruto * 0.10
+salario_imp20 = salario_bruto - salario_bruto * 0.20
+
 
 if salario_bruto <= 900:
     salario_bruto = salario_bruto
