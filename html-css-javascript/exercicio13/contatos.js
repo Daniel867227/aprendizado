@@ -40,7 +40,7 @@ const methods = {
         console.log(this.getTodosContatos())
       });
     });
-  },
+  },      
 
   addContato: function (novoContato, destinoDOM) {
     contatos.push({
