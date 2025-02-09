@@ -39,5 +39,5 @@ while True:
 
     if salario_bruto>900 and salario_bruto<=1500:
         salario_liquido = salario_bruto - salario_imp5 - salario_inss
-        print('Salário Bruto:(horas * 220):',salario_liquido) 
+        print('Salário Bruto é:(horas * 220):',salario_liquido) 
         print('(-) IR (5%):',salario_imp5)
