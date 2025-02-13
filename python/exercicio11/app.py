@@ -7,31 +7,35 @@ alunos =[]
 
 
 #input para entrar com numero de alunso que serao cadastrados 
-Num_Alunos=(int(input('DIGITE O NUMERO DE ALUNOS: ')))    
+num_alunos=((input('DIGITE O NUMERO DE ALUNOS: ')))
+while num_alunos.isalpha():
+    print('DIGITE UM NÚMERO VÁLIDO!')
+    num_alunos=((input('DIGITE O NUMERO DE ALUNOS: ')))
+
 
 #for para repetir o laço de acordo com o numero de alunos
-for x in range(0,Num_Alunos):
+for x in range(0,int(num_alunos)):
 
     a = input('DIGITE O NOME DO ALUNO:')
 
-#teste para ver se o nome digitado é valido ou nao
+    #teste para ver se o nome digitado é valido ou nao
     while a.isnumeric() or len(a)<2:
         print('DIGITE UM NOME VALIDO!')  
         a = input('DIGITE O NOME DO ALUNO:')
     else:
-#nome validado é adicionado a lista
+        #nome validado é adicionado a lista
         alunos.append(a) 
 
 
     n = input('DIGITE A NOTA DESSE ALUNO:')
 
-#teste para ver se numero digitado é valido ou nao 
+    #teste para ver se numero digitado é valido ou nao 
     while n.isalpha():
         print('DIGITE UMA NOTA VALIDA!')
         n = input('DIGITE A NOTA DESSE ALUNO:')
     else:
-#numero validado inserido a lista
-        notas.append(n)
+        #numero validado inserido a lista
+        notas.append(int(n))
 
 
 #usand for com zip para printar duas variaveis em duas listas
@@ -39,16 +43,6 @@ for aluno, nota in zip(alunos,notas):
     print(f'O {aluno} obteve a nota {nota}')
 
 #retorna a nota maxima. porem esta dando erro e retornando a nota porem nao é a maxima
-print(max(notas))
 
-
-
-    
- 
-   
-
-    
-
-
-
+print(f'A maior nota foi: {max(notas)}')
 
