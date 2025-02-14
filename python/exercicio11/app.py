@@ -4,13 +4,10 @@
 #Listas previamente vazias
 notas = []
 alunos =[]
+resultados=[]
 
-
-#input para entrar com numero de alunso que serao cadastrados 
-num_alunos=((input('DIGITE O NUMERO DE ALUNOS: ')))
-while num_alunos.isalpha():
-    print('DIGITE UM NÚMERO VÁLIDO!')
-    num_alunos=((input('DIGITE O NUMERO DE ALUNOS: ')))
+#input para entrar com numero de alunos que serao cadastrados 
+num_alunos=(int((input('DIGITE O NUMERO DE ALUNOS: '))))
 
 
 #for para repetir o laço de acordo com o numero de alunos
@@ -37,12 +34,18 @@ for x in range(0,int(num_alunos)):
         #numero validado inserido a lista
         notas.append(int(n))
 
+#for para criar uma variavel tupla e colocar todos os itens das duas listas nela. Depois essa variavel vai para uma nova lista chaamda resultados
+for i in range(num_alunos):
+    tupla = (alunos[i],notas[i])
+    resultados.append(tupla)
+print(resultados)
 
-#usand for com zip para printar duas variaveis em duas listas
-for aluno, nota in zip(alunos,notas):
-    print(f'O {aluno} obteve a nota {nota}')
+#criei uma variavel chamada indice que pega o indice referente a nota maxima da lista de notas
+indice = ((notas.index(max(notas))))
+#indice é chamado dentro da nova lista resultados para mostrar a maior nota com o nome do aluno
+print(f'A MAIOR NOTA FOI {resultados[indice]}')
 
-#retorna a nota maxima. porem esta dando erro e retornando a nota porem nao é a maxima
-
-print(f'A maior nota foi: {max(notas)}')
+indice = ((notas.index(min(notas))))
+#indice é chamado dentro da nova lista resultados para mostrar a maior nota com o nome do aluno
+print(f'A MENOR NOTA FOI {resultados[indice]}')
 
