@@ -1,13 +1,18 @@
-#crie um programa que leia as notas e os nomes dos respectivos alunos e coloque em uma lista. Informa na sequencia o nome e a nota de cada aluno]
-# E em seguida informe qual aluno teve a maior nota
+#crie um programa que:
+#  leia as notas e os nomes dos respectivos alunos e coloque em uma lista 
+#  Informa na sequencia o nome e a nota de cada aluno
+# E em seguida informe quais alunos tiveram a maior nota
+# Deposi quais alunos tiveram a menor nota
+#por fim informe quais alunos tiraram notas iguais
 
 #Listas previamente vazias
 notas = []
 alunos =[]
 resultados=[]
+repetidos=[]
 
 #input para entrar com numero de alunos que serao cadastrados 
-num_alunos=(int((input('DIGITE O NUMERO DE ALUNOS: '))))
+num_alunos= (int(input('DIGITE O NUMERO DE ALUNOS:')))
 
 
 #for para repetir o laço de acordo com o numero de alunos
@@ -24,12 +29,12 @@ for x in range(0,int(num_alunos)):
         alunos.append(a) 
 
 
-    n = input('DIGITE A NOTA DESSE ALUNO:')
+    n = input('DIGITE A NOTA DESSE ALUNO (ENTRE 0 E 10):')
 
     #teste para ver se numero digitado é valido ou nao 
     while n.isalpha():
         print('DIGITE UMA NOTA VALIDA!')
-        n = input('DIGITE A NOTA DESSE ALUNO:')
+        n = (int(input('DIGITE A NOTA DESSE ALUNO:')))
     else:
         #numero validado inserido a lista
         notas.append(int(n))
@@ -38,16 +43,48 @@ for x in range(0,int(num_alunos)):
 for i in range(num_alunos):
     tupla = (alunos[i],notas[i])
     resultados.append(tupla)
+
+print('')
+print('')
 print(resultados)
+print('')
+print('')
 
 max= 0
 for nota in notas:
     if nota>max:
         max = nota
-print(max)
 
-min=float('inf')
+min=11
 for nota in notas:
     if nota<min:
         min=nota
-print(min)
+
+for i in range(len(notas)):
+    if notas[i] == max:
+        print(resultados[i]) 
+print('')
+print('')
+
+
+for i in range(len(notas)):
+    if notas[i] == min:
+        print(resultados[i])
+print('')
+print('')
+
+for i in range(len(notas)):
+    for j in range(i+1,len(notas)):
+        if notas[i]==notas[j]:
+            repetidos.append(resultados[i])
+            repetidos.append(resultados[j])
+print(repetidos)
+
+
+#for i in range(len(notas)):
+ #   for j in range(i + 1, len(notas)):
+  #      if notas[i] == notas[j] and notas[i] not in repetidos:
+   #         repetidos.append(notas[i])
+
+
+        

@@ -49,3 +49,6 @@ indice = ((notas.index(min(notas))))
 #indice é chamado dentro da nova lista resultados para mostrar a maior nota com o nome do aluno
 print(f'A MENOR NOTA FOI {resultados[indice]}')
 
+
+
+
