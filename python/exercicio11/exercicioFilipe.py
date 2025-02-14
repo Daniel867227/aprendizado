@@ -44,47 +44,33 @@ for i in range(num_alunos):
     tupla = (alunos[i],notas[i])
     resultados.append(tupla)
 
-print('')
-print('')
-print(resultados)
-print('')
-print('')
+print('\m',resultados,'\n')
 
+min=11
 max= 0
+
 for nota in notas:
     if nota>max:
         max = nota
-
-min=11
-for nota in notas:
     if nota<min:
         min=nota
 
+
 for i in range(len(notas)):
     if notas[i] == max:
-        print(resultados[i]) 
-print('')
-print('')
+        print('\n',resultados[i],'\n') 
 
-
-for i in range(len(notas)):
     if notas[i] == min:
-        print(resultados[i])
-print('')
-print('')
+        print('')
+        print('')
+        print('\n',resultados[i],'\n\n')
+
 
 for i in range(len(notas)):
     for j in range(i+1,len(notas)):
         if notas[i]==notas[j]:
             repetidos.append(resultados[i])
             repetidos.append(resultados[j])
-print(repetidos)
-
-
-#for i in range(len(notas)):
- #   for j in range(i + 1, len(notas)):
-  #      if notas[i] == notas[j] and notas[i] not in repetidos:
-   #         repetidos.append(notas[i])
-
+print('\n',repetidos,'\n')
 
         
