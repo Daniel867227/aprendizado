@@ -1,15 +1,21 @@
 window.alert('OLA, SEJA MUITO BEM VINDO!')
 var nome = window.prompt('QUAL O SEU NOME?')
 /*ESSE COMANDO COLOCA UM ALERTA NA TELA*/ 
-document.write(`OLA ${nome}, MUITO PRAZER!<br>`)
+window.document.write(`OLA ${nome}, MUITO PRAZER!<br>`)
 /*ESSE COMANDO COLOCA A MENSAGEM NO BODY DA PAGINA */
-document.write(`O SEU NOME TEM ${nome.length} LETRAS <br>`)
+window.document.write(`O SEU NOME TEM ${nome.length} LETRAS <br>`)
 /*ESCREVI COMO TEMPLATE STRINGS USANDO OS PLACEHOLDERS ${} */
-document.write(`O SEU NOME ESCRITO EM MAIUSCULAS É ${nome.toUpperCase()}<br>`)
-document.write(`O SEU NOME ESCRITO EM MINUSCULAS É ${nome.toLowerCase()}<br>`)
+window.document.write(`O SEU NOME ESCRITO EM MAIUSCULAS É ${nome.toUpperCase()}<br>`)
+window.document.write(`O SEU NOME ESCRITO EM MINUSCULAS É ${nome.toLowerCase()}<br>`)
 
 var cpf = window.prompt('DIGITE O NUMERO DO SEU CPF:')
 
-document.write(`O SEU CPF É ${cpf}`)
+window.document.write(`O SEU CPF É ${cpf}<br>`)
 
-/*PAREI EM OPERADORES PARTE 2 */
+var idade = window.prompt('QUAL A SUA IDADE?')
+
+usuario_cadastrado = (idade >= 18 ?`USUARIO DE CPF ${cpf}, COM ${idade} CADASTRADO` : `USUARIO MENOR DE IDADE, NAO PODE SER CADASTRADO`)
+                /*isso que está em parentese é um operador ternario. sua estrutura é logica ? o que vai retornar se for true : o que vai retornar ser for false */
+window.document.write(usuario_cadastrado)
+
+/*PAREI NO INTRODUCAO AO DOM AULA 9 */
