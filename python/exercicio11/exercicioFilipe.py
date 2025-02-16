@@ -63,7 +63,7 @@ for i in range(len(notas)):
     if notas[i] == min:
         print('')
         print('')
-        print('\n',resultados[i],'\n\n')
+        print('\n',resultados[i])
 
 
 for i in range(len(notas)):

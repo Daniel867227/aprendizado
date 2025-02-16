@@ -1,34 +1,21 @@
-def contador(inicio,passo,fim):
-    if passo<0:
-        passo = passo*(-1)
+lista =['DANIEL', 'CARRO', 12, True]
 
-    if inicio<fim:
+tupla =['daniel', 123, 'roma']
 
-        cont = inicio
-        while cont <= fim:
-            print(cont)
-            cont += passo
-        
-    
-    if passo<0:
-        passo = passo *(-1)
+dicionario ={'nome': 'daniel', 'idade': '33', 'boleana': True, 'numero': 34}
 
-    if inicio>fim:
-
-        cont = inicio
-        while cont >=fim:
-            print(cont)
-            cont -= passo
-            
+a= lista.index(True)
+print(a)
+print(lista[1])
 
 
-contador(1,1,10)
-print('________________________________________________________--')
-print('')
-contador(10,2,0)
+b=tupla.index('roma')
+print(b)
+print(tupla[2])
 
-i=int(input('CONTAR A PARTIR DE QUAL NUMERO?'))
-p=int(input('CONTAR DE QUANTO EM QUANTO? '))
-f=int(input('CONTAR ATÉ QUAL NUMERO? '))
 
-contador(i,p,f)
+
+print(dicionario['boleana'])
+print(dicionario['nome'])
+
+print(type(dicionario))
