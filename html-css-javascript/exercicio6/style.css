@@ -1,42 +1,44 @@
-h1{
+body {
+
+    background: rgb(165, 115, 165);
+    font: normal 15pt Arial;
+    color: white;
+
+
+
+}
+
+header{
     text-align: center;
 
 }
 
-div#manha {
-    text-align: center;
-    visibility: hidden ;
+section{
+
     background: white;
+    box-shadow: 20px 5px 10px rgba(0, 0, 0, 0.575);
     width: 500px;
-    height: 300px;
-    margin-left: 370px;
-    border-radius: 10%;
-    font-size: 23px;
-  
-}
-
-div#manha img{
-    max-width: 250px;
-    max-height: 250px;
-    border-radius: 100%;
-
-}
-
-div#tarde {
+    padding: 15px;
+    margin: auto;
+    border-radius: 10px;
     text-align: center;
-    visibility: hidden ;
-    background: white;
-    width: 500px;
-    height: 300px;
-    margin-left: 370px;
-    border-radius: 10%;
-    font-size: 23px;
-  
+    color: black;
+
+
+
 }
 
-div#tarde img{
-    max-width: 250px;
-    max-height: 250px;
-    border-radius: 100%;
 
+footer{
+    text-align: center;
+    font-style: italic;
+
+}
+
+img#imagem {
+
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: auto;
 }
