@@ -1,0 +1,18 @@
+body{
+    background: rgb(57, 57, 78);
+}
+
+h1{
+    text-align: center;
+    color:aliceblue
+}
+
+div#div1{
+    background: white;
+    margin:auto;
+    padding: 30px;
+    width: 350px;
+    border-radius: 20px;
+
+}
+

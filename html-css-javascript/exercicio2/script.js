@@ -16,6 +16,11 @@ var idade = window.prompt('QUAL A SUA IDADE?')
 
 usuario_cadastrado = (idade >= 18 ?`USUARIO DE CPF ${cpf}, COM ${idade} CADASTRADO` : `USUARIO MENOR DE IDADE, NAO PODE SER CADASTRADO`)
                 /*isso que está em parentese é um operador ternario. sua estrutura é logica ? o que vai retornar se for true : o que vai retornar ser for false */
-window.document.write(usuario_cadastrado)
+window.document.write(`O ${usuario_cadastrado}<br>`)
 
-/*PAREI NO INTRODUCAO AO DOM AULA 9 */
+a= 10
+
+window.document.write(`${a++} <br>`)
+/* O SINAL ++ POS INCRIMENTO MOSTRA VARIAVEL PRIMEIRO E DEPOIS INCREMENTA, O ++ USADO ANTES DA VARIAVEL,JA ADICIONA E DEPOIS MOSTRA */
+window.document.write(a)
+/*PAREI NO INTRODUCAO AO DOM AULA 9 */0
