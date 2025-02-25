@@ -20,27 +20,25 @@
 	
 
 	
-	<section>
+	<section class="container">
 		<div class="list">
 			<div class="item">
 				<div class="car-img">
-					<img src="car1.png" alt="carro">
+					<img id="carro" src="car1.png" alt="carro">
 				</div>
 				<div class="content">
 					<p class="information-car">
 						Unico dono
 					</p>
 
-					<h2>
-						Ferrari
+					<h2 id="nome_carro">
+						AUDI
 					</h2>
 					<p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, veritatis saepe, illo tempora expedita ab sint laborum nesciunt alias nemo officia quasi ipsam voluptas minus pariatur similique labore atque quisquam?
 
 					</p>
 
-					<button>
-						Saiba mais
-					</button>
+					<button class="information"><a id="link-information" href="information-audi.html" target="_blank">Saiba mais</a></button>
 
 				</div>
 
@@ -49,19 +47,25 @@
 		</div>
 
 		<div class="arrows">
-			<button><img src="arrow.png" alt="seta"></button>
-			<button><img src="arrow.png" alt="seta"></button>
+			<button id="prev"> <img src= "arrow.png" alt="seta"> </button>
+			<button id="next"> <img src= "arrow.png" alt="seta"> </button>
 			
 		</div>
 
-		<div class="indicators"></div>
-			<div class="number">01</div>
+
+
+		<div class="indicators">
+			<div class="number">1</div>
 			<ul>
 				<li class="active"></li>
 				<li></li>
 				<li></li>
 			</ul>
 
+		</div>
+
 	</section>
+
+<script src="script.js"></script>
 </body>
 </html>
