@@ -1,0 +1,50 @@
+body{
+
+    background-color: white;
+}
+
+
+#form{
+    position:absolute;
+    top:20%;
+    left:50%;
+    transform: translateX(-50%);
+    border-radius: 20%;
+    border-color: black;
+    border-style:double;
+    padding: 30px;
+    display: grid;
+    gap: 30px;
+    
+
+}
+
+#form{
+
+    & #campo {
+
+        font-size: 25px;
+    }
+
+    & #btn_gravar{
+
+        font-size: 15px;
+        text-align: center;
+        
+    }   
+}
+
+#listaContatos{
+
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    & .contato{
+        border-style: double;
+        padding: 10px;
+    }
+}

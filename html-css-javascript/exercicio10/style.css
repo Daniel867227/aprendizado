@@ -1,0 +1,35 @@
+
+body {
+
+    background-color: blue;
+}
+
+
+section{
+
+    background-color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 400px;
+}
+
+
+#dados_entrada{
+
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    gap:50px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#lista{
+
+    width: 130px;
+    height: 200px;
+    margin-top: 20px;
+    margin-left: 20px;
+}

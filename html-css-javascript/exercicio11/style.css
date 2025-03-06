@@ -1,0 +1,39 @@
+body{
+
+    background-color: blue;
+}
+
+section {
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30%;
+    background-color: aliceblue;
+    width: 800px;
+    height: 600px;
+}
+
+
+#add_numeros{
+
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+#finalizar{
+
+    margin-top: 20px;
+    margin-left: 20px;
+    display: grid;
+    columns: 1fr 1fr;
+    max-width: 200px;
+    gap: 20px;
+}
+
+
+
