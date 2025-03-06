@@ -1,76 +1,55 @@
-import {contatos} from "./bancoContatos.js"
+import { contatos } from "./bancoContatos.js";
 
+const methods = {
+  getTodosContatos: function () {
+    return contatos;
+  },
 
+  getContato: function (i_cont) {
+    return contatos[i_cont];
+  },
 
+  drawContacts: function (destinoDOM) {
+    destinoDOM.innerHTML = "";
 
-let contato= {
-    getTodosContatos: function(){
+    contatos.forEach((c, index) => {
+      const div = document.createElement("div");
+      div.setAttribute("class", "contato");
+      const p_nome = document.createElement("p");
+      p_nome.innerHTML = c.nome;
+      const p_telefone = document.createElement("p");
+      p_telefone.innerHTML = c.telefone;
+      const p_email = document.createElement("p");
+      p_email.innerHTML = c.email;
+      const botao = document.createElement("button");
+      botao.setAttribute("class", "botao");
+      const p_botao = document.createElement("p");
+      botao.appendChild(p_botao);
+      p_botao.innerHTML = "deletar";
+      div.appendChild(botao);
 
-        return contatos
-    },
+      div.appendChild(p_nome);
+      div.appendChild(p_telefone);
+      div.appendChild(p_email);
+      destinoDOM.appendChild(div);
 
-    getContato: function(i_cont){
+      botao.addEventListener("click", () => {
+        contatos.splice(index, 1);
 
-        return contatos[i_cont]
-    },
+        this.drawContacts(destinoDOM);
+      });
+    });
+  },
 
-    addContato: function(novoContato,destinoDOM){
+  addContato: function (novoContato, destinoDOM) {
+    contatos.push({
+      nome: novoContato.nome,
+      telefone: novoContato.telefone,
+      email: novoContato.email,
+    });
 
+    this.drawContacts(destinoDOM);
+  },
+};
 
-
-        const cont = {
-
-            nome:novoContato.nome,
-            telefone:novoContato.telefone,
-            email:novoContato.email
-    
-        }
-
-        contatos.push(cont)
-
-        destinoDOM.innerHTML=''
-
-
-
-        contatos.forEach(function add(c){
-
-        const div = document.createElement('div')
-        div.setAttribute('class','contato')
-        const p_nome = document.createElement('p')
-        p_nome.innerHTML=c.nome
-        const p_telefone = document.createElement('p')
-        p_telefone.innerHTML=c.telefone
-        const p_email = document.createElement('p')
-        p_email.innerHTML=c.email
-        const botao = document.createElement('button')
-        botao.setAttribute('class', 'botao')
-        const p_botao = document.createElement('p')
-        botao.appendChild(p_botao)
-        p_botao.innerHTML='deletar'
-        div.appendChild(botao)
-        
-
-        div.appendChild(p_nome)
-        div.appendChild(p_telefone)
-        div.appendChild(p_email)
-        destinoDOM.appendChild(div)
-
-        const cont = 0
-
-        botao.addEventListener('click', del)
-
-        function del(){
-            contatos.splice(contatos[cont],1)
-            console.log(contato.getTodosContatos())
-        }
-
-        cont = cont +1
-
-        })
-        
-    }
-
-
-}
-
-export default contato
+export default methods;

@@ -15,7 +15,7 @@ body{
     padding: 30px;
     display: grid;
     gap: 30px;
-    
+
 
 }
 
@@ -30,8 +30,8 @@ body{
 
         font-size: 15px;
         text-align: center;
-        
-    }   
+
+    }
 }
 
 #listaContatos{
