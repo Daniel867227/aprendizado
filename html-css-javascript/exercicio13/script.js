@@ -1,4 +1,4 @@
-import c from "./contatos.js";
+import methods from "./contatos.js";
 
 const listaContatos = document.getElementById("listaContatos");
 const btn_gravar = document.getElementById("btn_gravar");
@@ -12,6 +12,7 @@ function gravar() {
     email: document.getElementById("f_email").value,
   };
 
-  c.addContato(cont, listaContatos);
-  console.log(c.getTodosContatos());
+  methods.addContato(cont, listaContatos);
+  methods.drawContacts(listaContatos)
+
 }

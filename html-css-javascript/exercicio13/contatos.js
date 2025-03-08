@@ -12,15 +12,15 @@ const methods = {
   drawContacts: function (destinoDOM) {
     destinoDOM.innerHTML = "";
 
-    contatos.forEach((c, index) => {
+    contatos.forEach((contato, index) => {
       const div = document.createElement("div");
       div.setAttribute("class", "contato");
       const p_nome = document.createElement("p");
-      p_nome.innerHTML = c.nome;
+      p_nome.innerHTML = contato.nome;
       const p_telefone = document.createElement("p");
-      p_telefone.innerHTML = c.telefone;
+      p_telefone.innerHTML = contato.telefone;
       const p_email = document.createElement("p");
-      p_email.innerHTML = c.email;
+      p_email.innerHTML = contato.email;
       const botao = document.createElement("button");
       botao.setAttribute("class", "botao");
       const p_botao = document.createElement("p");
@@ -37,6 +37,7 @@ const methods = {
         contatos.splice(index, 1);
 
         this.drawContacts(destinoDOM);
+        console.log(this.getTodosContatos())
       });
     });
   },
@@ -49,6 +50,7 @@ const methods = {
     });
 
     this.drawContacts(destinoDOM);
+    console.log(this.getTodosContatos());
   },
 };
 
