@@ -1,31 +1,28 @@
+let methods={
 
-function inserir(){
+  drawNotas: function(notas, destinoDOM){
 
   
-   
-    notas.push({nome: nome, nota: Number(nota.value)})
-    let item = document.createElement('p')
-    item.textContent=`O aluno ${notas[i].nome.value} tirou ${notas[i].nota}`
-    nomes_notas.appendChild(item)
-    i++
+
+    let div = document.createElement('div')
+    div.getAttribute('id','notas')
+    let pNome = document.createElement('p')
+    pNome.innerHTML= notas.nome
+    let pNota = document.createElement('p')
+    pNota.innerHTML= notas.nota
+  
+    div.appendChild(pNome)
+    div.appendChild(pNota)
+    destinoDOM.appendChild(div)
+  
   
   }
-  
-  
-function calcular(){
-  
-    let nota_maior = document.getElementById('nota_maior')
-    let maior_nota = Math.max.apply(null,notas.map((user) => user.nota))
-    nota_maior.textContent=maior_nota
-  
-  }
+
   
 
-function somar(a,b){
-    let res = a + b
-    return res 
 
-  }
+}
 
 
-export {inserir, calcular, somar}  
+
+export {methods}

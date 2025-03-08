@@ -1,0 +1,5 @@
+let alunos = []
+
+export {alunos}
+
+
