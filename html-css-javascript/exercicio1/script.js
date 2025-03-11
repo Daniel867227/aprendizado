@@ -17,7 +17,7 @@ function calcular(){
         
     let max = Math.max.apply(null, alunos.nota)
 
-    console.log(alunos.nota)
+    console.log(alunos[0].nome)
 
   }
 

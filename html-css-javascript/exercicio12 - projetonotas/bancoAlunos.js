@@ -1,4 +1,4 @@
-let alunos = []
+const alunos= []
 
 export {alunos}
 

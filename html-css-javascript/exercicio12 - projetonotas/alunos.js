@@ -19,7 +19,7 @@ botaoInserir.addEventListener("click", ()=>
     
     
         methods.addNotas(dadosAlunos,resultados)
-        methods.drawNotas(resultados, alunos)
+        methods.drawNotas(resultados)
     })
 
 botaoCalcular.addEventListener('click', () => {
@@ -29,14 +29,16 @@ botaoCalcular.addEventListener('click', () => {
         
         for (let i in alunos){
     
-            if (alunos[i].nota > max){
+            if (Number(alunos[i].nota) > max){
                 max = alunos[i].nota
                 }
             
         
         }
     
+        console.log(alunos)
         console.log(max)
+
       
           }
     )
