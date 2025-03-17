@@ -37,10 +37,10 @@ const methods = {
         contatos.splice(index, 1);
 
         this.drawContacts(destinoDOM);
-        console.log(this.getTodosContatos())
+        console.log(this.getTodosContatos());
       });
     });
-  },      
+  },
 
   addContato: function (novoContato, destinoDOM) {
     contatos.push({

@@ -1,55 +1,84 @@
-import { alunos } from "./bancoAlunos.js"
-import {professores} from "./bancoProfessores.js"
-
+import listas from "./bancoDeDados.js";
 
 class Pessoa {
-    constructor(nome, nota) {
+  constructor(nome, nota) {
+    this.nome = nome;
+    this.nota = nota;
+  }
 
-        this.nome = nome
-        this.nota = nota
-        
-    }
+  salvarBanco(lista) {
+    lista.push({
+      nome: this.nome,
+      nota: this.nota,
+    });
 
-    salvar(lista){
-            lista.push({
-            nome: this.nome,
-            nota: this.nota
-        })
+    return lista;
+  }
 
-        return lista
-    }
+  drawDados(destinoDom, lista) {
 
+    lista.forEach((index) => {
 
-    }
+      destinoDom.innerHTML=''
+      
+      const div = document.createElement("div");
+      div.getAttribute("class", "resultados");
+      const pNome = document.createElement("p");
+      pNome.innerHTML = this.nome;
+      const pNota = document.createElement("p");
+      pNota.innerHTML = this.nota;
+      const botaoDelete = document.createElement("button");
+      const pBotao = document.createElement("p");
+      pBotao.innerHTML = "Deletar";
 
-    let botaoAluno = document.getElementById('botaoAluno')
-    botaoAluno.addEventListener('click',clicarAluno)
+      div.appendChild(pNome);
+      div.appendChild(pNota);
+      botaoDelete.appendChild(pBotao);
+      div.appendChild(botaoDelete);
 
-    function clicarAluno(){
+      destinoDom.appendChild(div);
 
-        let nomeAluno = document.getElementById('nomeAluno').value
-        let notaAluno = document.getElementById('notaAluno').value
+      botaoDelete.addEventListener("click", () => {
+        lista.splice(index, 1);
+        this.drawDados(destinoDom, lista);
+        console.log(lista);
+      });
+    });
+  }
+}
 
-        let alunoCadastrado = new Pessoa(nomeAluno,notaAluno)
+const botaoAluno = document.getElementById("botaoAluno");
+botaoAluno.addEventListener("click", clicarAluno);
 
+function clicarAluno() {
+  let nomeAluno = document.getElementById("nomeAluno").value;
+  let notaAluno = document.getElementById("notaAluno").value;
 
-        console.log(alunoCadastrado.salvar(alunos))
+  let alunoCadastrado = new Pessoa(nomeAluno, notaAluno);
 
-    }
+  let resultados = document.getElementById("resultados");
 
-    let botaoProfessor = document.getElementById('botaoProfessor')
-    botaoProfessor.addEventListener('click',clicarProfessor)
+  alunoCadastrado.drawDados(resultados, listas.alunos);
 
-    function clicarProfessor(){
+  alunoCadastrado.salvarBanco(listas.alunos);
 
-        let nomeProfessor = document.getElementById('nomeProfessor').value
-        let notaProfessor = document.getElementById('notaProfessor').value
+  console.log(listas.alunos);
+}
 
-        let professorCadastrado = new Pessoa(nomeProfessor,notaProfessor)
+const botaoProfessor = document.getElementById("botaoProfessor");
+botaoProfessor.addEventListener("click", clicarProfessor);
 
+function clicarProfessor() {
+  let nomeProfessor = document.getElementById("nomeProfessor").value;
+  let notaProfessor = document.getElementById("notaProfessor").value;
 
-        console.log(professorCadastrado.salvar(professores))
+  let professorCadastrado = new Pessoa(nomeProfessor, notaProfessor);
 
-    }
+  let resultados = document.getElementById("resultados");
 
+  professorCadastrado.drawDados(resultados, listas.professores);
 
+  professorCadastrado.salvarBanco(listas.professores);
+
+  console.log(listas.professores);
+}

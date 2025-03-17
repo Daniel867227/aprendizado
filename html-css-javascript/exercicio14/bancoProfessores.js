@@ -1,3 +1,0 @@
-const professores = []
-
-export {professores}

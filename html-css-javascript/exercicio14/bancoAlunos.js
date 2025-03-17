@@ -1,4 +1,0 @@
-const alunos = []
-
-
-export {alunos}
